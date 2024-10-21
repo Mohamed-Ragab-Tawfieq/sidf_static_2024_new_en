@@ -27,8 +27,14 @@
 
         &:hover {
             background:
-                url("../images/arrows/left/5.svg") no-repeat center left 50px / contain,
+                url("../images/arrows/left/5-en.svg") no-repeat center left 50px / contain,
                 linear-gradient(180deg, #3c80b0 -0.99%, #165578 95.36%) !important;
+
+            [lang="en"] & {
+                background:
+                    url("../images/arrows/left/5-en.svg") no-repeat center right 50px / contain,
+                    linear-gradient(180deg, #3c80b0 -0.99%, #165578 95.36%) !important;
+            }
         }
     }
 
@@ -47,12 +53,18 @@
 
     &:hover {
         background:
-            url("../images/arrows/left/5.svg") no-repeat center left 50px / contain,
+            url("../images/arrows/left/5-en.svg") no-repeat center left 50px / contain,
             linear-gradient(0deg, #386732 6.54%, #467836 24.54%, #5d933c 56.54%, #6ba440 84.54%, #70aa42 106.54%);
         color: $white;
 
         transition: all 0.5s ease-in-out;
         animation: liAnimate 0.5s;
+
+        [lang="en"] & {
+            background:
+                url("../images/arrows/left/5-en.svg") no-repeat center right 50px / contain,
+                linear-gradient(0deg, #386732 6.54%, #467836 24.54%, #5d933c 56.54%, #6ba440 84.54%, #70aa42 106.54%);
+        }
 
         @keyframes liAnimate {
             from {
@@ -92,8 +104,21 @@
 
         &.span-2 {
             background:
-                url("../images/arrows/left/5.svg") no-repeat center left 30px / contain,
+                url("../images/arrows/left/5-en.svg") no-repeat center left 30px / contain,
                 linear-gradient(0deg, #386732 6.54%, #467836 24.54%, #5d933c 56.54%, #6ba440 84.54%, #70aa42 106.54%);
+
+            [lang="en"] & {
+                background:
+                    url("../images/arrows/left/5-en.svg") no-repeat center right 30px / contain,
+                    linear-gradient(
+                        0deg,
+                        #386732 6.54%,
+                        #467836 24.54%,
+                        #5d933c 56.54%,
+                        #6ba440 84.54%,
+                        #70aa42 106.54%
+                    );
+            }
         }
 
         &.arrow-reverse {
@@ -101,10 +126,29 @@
                 url("../images/arrows/right/1.svg") no-repeat center left -20px / 70px,
                 linear-gradient(0deg, #386732 6.54%, #467836 24.54%, #5d933c 56.54%, #6ba440 84.54%, #70aa42 106.54%);
 
+            [lang="en"] & {
+                background:
+                    url("../images/arrows/right/1-en.svg") no-repeat center right -20px / 70px,
+                    linear-gradient(
+                        0deg,
+                        #386732 6.54%,
+                        #467836 24.54%,
+                        #5d933c 56.54%,
+                        #6ba440 84.54%,
+                        #70aa42 106.54%
+                    );
+            }
+
             &.primary {
                 background:
-                    url("../images/arrows/right/5.svg") no-repeat center left -20px / 70px,
+                    url("../images/arrows/right/5-en.svg") no-repeat center left -20px / 70px,
                     linear-gradient(180deg, #3c80b0 -0.99%, #165578 95.36%);
+
+                [lang="en"] & {
+                    background:
+                        url("../images/arrows/right/5-en.svg") no-repeat center right -20px / 70px,
+                        linear-gradient(180deg, #3c80b0 -0.99%, #165578 95.36%);
+                }
             }
         }
     }

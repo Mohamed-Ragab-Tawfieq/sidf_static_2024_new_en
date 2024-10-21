@@ -400,6 +400,10 @@ section {
 .sec-arrow-end-right {
     @media (min-width: 1200px) {
         background: url("../images/arrows/right/3.svg") no-repeat bottom -10% left / 15%;
+
+        [lang="en"] & {
+            background-position-x: right !important;
+        }
     }
 }
 
