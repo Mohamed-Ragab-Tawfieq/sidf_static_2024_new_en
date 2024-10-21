@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Saudi Industrial Development Fund">
+        <link rel="icon" href="../assets/favicon.png">
+        <link rel="apple-touch-icon" href="../assets/favicon.png">
+        <title>SIDF</title>
+        <link rel="stylesheet" href="../assets/styles/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/vendors/aos.css">
+        <link rel="stylesheet" href="../assets/styles/main.min.css">
+    </head>
+
+    <body id="body">
+        <header class="inner-header collapsed" id="inner-header">
+            <div class="container">
+                <nav class="flex-between flex-row">
+                    <div class="flex-y-row gap-2">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
+
+                        <a href="../index.html"><img src="../assets/images/logo.svg" width="77" alt="logo"></a>
+                    </div>
+
+                    <h2 class="site-name"><a href="../index.html">التقــرير السنوي 2023</a></h2>
+
+                    <div class="flex-between">
+                        <button type="button" class="btn download-btn success" data-bs-toggle="modal" data-bs-target="#downloadModal">
+                            تحميل ملف الفصل 2
+                            <img src="../assets/images/icons/download-04.svg" class="white-img" alt="download">
+                        </button>
+                        <button class="btn px-1 text-success"><img src="../assets/images/icons/search.svg" alt="search"></button>
+                        <button class="btn px-1 fw-5" type="button"> EN </button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <header class="mobile-header collapsed" id="mobile-header">
+            <div class="container">
+                <nav>
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#innerModal"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
+                    <a href="index.html"><img src="../assets/images/logo.svg" width="77" class="logo" alt="logo"></a>
+                    <button class="btn"><img src="../assets/images/icons/search.svg" alt="search"></button>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section>
+                <div class="inner-top-img" id="inner-top-img" data-aos="fade-up" data-aos-duration="500">
+                    <img src="../assets/images/top-img/2.png" class="top-img absolute-center" alt=" welcome image">
+
+                    <button class="btn play-btn absolute-center" id="play-btn" onclick="playTopVideo()">
+                        <i class='material-icons'>play_circle_filled</i>
+                    </button>
+
+                    <video class="top-video absolute-center" id="top-video" controls muted>
+                        <source src="../assets/videos/section-2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <h2 class="title">02</h2>
+                    <h2 class="title">أبرز أرقام 2023م</h2>
+                    <img src="../assets/images/arrows/left/4.svg" class="arrows img-fluid" width="200" alt="arrows">
+                </div>
+            </section>
+
+            <nav class="sidf-navbar" id="sidf-navbar">
+                <ul class="nav nav-pills grid-4">
+                    <li class=" nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                        <a class="nav-link success" href="loans.html">أولا: النشاط الإقراضي</a>
+                    </li>
+                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                        <a class="nav-link success" href="digital-transformation.html">ثانيا: التحول الرقمي</a>
+                    </li>
+                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                        <a class="nav-link success" href="sponsor.html">ثالثا: البرامج التحفيزبة</a>
+                    </li>
+                    <li class="nav-item" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+                        <a class="nav-link success" href="human-capital.html">رابعا: تطوير رأس المال البشري</a>
+                    </li>
+                </ul>
+
+                <select id="sidf-navbar-mobile" class="sidf-navbar-mobile form-select"></select>
+                <div class="progress success" id="top-progress"></div>
+            </nav>
+
+            <!-- section -->
+            <section class="first-section success sec-padding" id="first-section" data-aos="fade-up" data-aos-duration="700">
+                <div class="container">
+                    <div>
+                        <div class="sec-arrows-wrapper">
+                            <img src="../assets/images/arrows/left/2.svg" class="sec-arrows" width="52" alt="arrows">
+                            <h1 class="sec-title text-success"> النشاط الإقراضي </h1>
+                        </div>
+
+                        <ul class="d-grid gap-3" style="grid-template-columns: 40vw auto auto;">
+                            <li class="vision-card success" data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="fs-1 fw-7 text-success">إجمالي القروض المعتمدة</h2>
+                                <div class="grid-2">
+                                    <div class="flex-y-row gap-2">
+                                        <img src="../assets/images/icons/file-02.svg" class="img-fluid success-img" alt="file">
+                                        <div>
+                                            <h6 class="f-18 fw-4 text-success text-nowrap">عدد القروض المعتمدة</h6>
+                                            <h2 class="sec-title text-success mt-2 purecounter" style="line-height: 0.6;" data-purecounter-end="134">134</h2>
+                                            <h3 class="fw-5 text-success">قرضا</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-y-row gap-2">
+                                        <img src="../assets/images/icons/coins-01.svg" class="img-fluid success-img" alt="coins">
+                                        <div>
+                                            <h6 class="f-18 fw-4 text-success text-nowrap">قيمة القروض المعتمدة</h6>
+                                            <h2 class="sec-title text-success mt-2 purecounter" style="line-height: 0.6;" data-purecounter-end="12.9" data-purecounter-decimals="1">12.9</h2>
+                                            <h3 class="fw-5 text-success">مليار ريال</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="vision-card success" data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="fs-1 fw-7 text-success">المبالغ المصروفة</h2>
+                                <div class="grid-2">
+                                    <div class="flex-y-row gap-2">
+                                        <img src="../assets/images/icons/money-add-02.svg" class="img-fluid success-img" alt="money">
+                                        <div>
+                                            <h2 class="sec-title text-success mt-6 purecounter" style="line-height: 0.6;" data-purecounter-end="9.5" data-purecounter-decimals="1">9.5</h2>
+                                            <h3 class="fw-5 text-success text-nowrap">مليار ريال</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="vision-card success" data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="fs-1 fw-7 text-success">المبالغ المسددة</h2>
+                                <div class="grid-2">
+                                    <div class="flex-y-row gap-2">
+                                        <img src="../assets/images/icons/money-remove-02.svg" class="img-fluid success-img" alt="money">
+                                        <div>
+                                            <h2 class="sec-title text-success mt-6 purecounter" style="line-height: 0.6;" data-purecounter-end="5.2" data-purecounter-decimals="1">5.2</h2>
+                                            <h3 class="fw-5 text-success text-nowrap">مليار ريال</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="grid-2 mt-8">
+                            <li class="vision-card success" data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="fs-1 fw-7 text-success">قروض للمناطق و المدن الواعدة</h2>
+                                <div class="grid-2">
+                                    <div class="flex-y-row gap-2">
+                                        <img src="../assets/images/icons/file-02.svg" class="success-img" alt="file">
+                                        <div>
+                                            <h6 class="f-18 fw-4 text-success text-nowrap">عدد القروض المعتمدة</h6>
+                                            <h2 class="sec-title text-success mt-2 purecounter" style="line-height: 0.6;" data-purecounter-end="35">35</h2>
+                                            <h3 class="fw-5 text-success">قرضا</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-y-row gap-2">
+                                        <img src="../assets/images/icons/coins-01.svg" class="success-img" alt="coins">
+                                        <div>
+                                            <h6 class="f-18 fw-4 text-success text-nowrap">قيمة القروض المعتمدة</h6>
+                                            <h2 class="sec-title text-success mt-2 purecounter" style="line-height: 0.6;" data-purecounter-end="2.1" data-purecounter-decimals="1">2.1</h2>
+                                            <h3 class="fw-5 text-success">مليار ريال</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="vision-card success" data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="fs-1 fw-7 text-success">المشاريــع المختلطة و الأجنبية</h2>
+                                <div class="grid-2">
+                                    <div class="flex-y-row gap-2">
+                                        <img src="../assets/images/icons/file-02.svg" class="success-img" alt="file">
+                                        <div>
+                                            <h6 class="f-18 fw-4 text-success text-nowrap">عدد القروض المعتمدة</h6>
+                                            <h2 class="sec-title text-success mt-2 purecounter" style="line-height: 0.6;" data-purecounter-end="25">25</h2>
+                                            <h3 class="fw-5 text-success">قرضا</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-y-row gap-2">
+                                        <img src="../assets/images/icons/coins-01.svg" class="success-img" alt="coins">
+                                        <div>
+                                            <h6 class="f-18 fw-4 text-success text-nowrap">قيمة القروض المعتمدة</h6>
+                                            <h2 class="sec-title text-success mt-2 purecounter" style="line-height: 0.6;" data-purecounter-end="7.9" data-purecounter-decimals="1">7.9</h2>
+                                            <h3 class="fw-5 text-success">مليار ريال</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="d-grid gap-3 mt-8" style="grid-template-columns: auto 45vw;">
+                            <li class="vision-card success" data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="fs-1 fw-7 text-success">المشاريــع الصغيــرة و المتوسطــة</h2>
+                                <div class="grid-2">
+                                    <div class="flex-y-row gap-2">
+                                        <img src="../assets/images/icons/file-02.svg" class="img-fluid success-img" alt="file">
+                                        <div>
+                                            <h6 class="f-18 fw-4 text-success text-nowrap">عدد القروض المعتمدة</h6>
+                                            <h2 class="sec-title text-success mt-2 purecounter" style="line-height: 0.6;" data-purecounter-end="83">83</h2>
+                                            <h3 class="fw-5 text-success">قرضا</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-y-row gap-2">
+                                        <img src="../assets/images/icons/coins-01.svg" class="img-fluid success-img" alt="coins">
+                                        <div>
+                                            <h6 class="f-18 fw-4 text-success text-nowrap">قيمة القروض المعتمدة</h6>
+                                            <h2 class="sec-title text-success mt-2 purecounter" style="line-height: 0.6;" data-purecounter-end="1.7" data-purecounter-decimals="1">1.7</h2>
+                                            <h3 class="fw-5 text-success">مليار ريال</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="vision-card success" data-aos="fade-up" data-aos-duration="700">
+                                <h2 class="fs-1 fw-7 text-success">المشاريع التي بدأت الإنتاج خلال عام 2023م</h2>
+                                <div class="grid-3">
+                                    <div class="flex-y-row gap-2">
+                                        <img src="../assets/images/icons/factory-02.svg" class="img-fluid success-img" alt="factory">
+                                        <div>
+                                            <h6 class="f-18 fw-4 text-success text-nowrap">عدد المشاريع</h6>
+                                            <h2 class="sec-title text-success mt-2 purecounter" style="line-height: 0.6;" data-purecounter-end="43">43</h2>
+                                            <h3 class="fw-5 text-success">مشروعا</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-y-row gap-2">
+                                        <img src="../assets/images/icons/coins-01.svg" class="img-fluid success-img" alt="coins">
+                                        <div>
+                                            <h6 class="f-18 fw-4 text-success text-nowrap">قيمة القروض المعتمدة</h6>
+                                            <h2 class="sec-title text-success mt-2 purecounter" style="line-height: 0.6;" data-purecounter-end="7.3" data-purecounter-decimals="1">7.3</h2>
+                                            <h3 class="fw-5 text-success">مليار ريال</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-y-row gap-2">
+                                        <img src="../assets/images/icons/briefcase-06.svg" class="img-fluid success-img" alt="briefcase">
+                                        <div>
+                                            <h6 class="f-18 fw-4 text-success text-nowrap">العمالة المقدرة</h6>
+                                            <h2 class="sec-title text-success mt-2 purecounter" style="line-height: 0.6;" data-purecounter-end="6989">6989</h2>
+                                            <h3 class="fw-5 text-success">فرصة وظيفية</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- section -->
+            <section class="sec-dark sec-logo-start logo-2" data-aos="fade-up" data-aos-duration="700">
+                <div class="container sec-padding position-relative">
+                    <div class="flex-between flex-column flex-lg-row">
+                        <h2 class="charts-title sec-title text-success w-lg-3" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine"> التوزيع القطاعي لقيمة القروض المعتمدة خلال عام 2023م</h2>
+
+                        <!-- chart -->
+                        <div class="statistics-loans-sectors px-12">
+                            <div id="sectorsChart" class="chart-wrapper" data-aos=" fade-up" data-aos-duration="700">
+                                <div class="chart-circle">
+                                    <h3 class="text-success display-4 fw-6 purecounter" data-purecounter-end="12.9" data-purecounter-decimals="1">12.9</h3>
+                                    <h4 class="text-success-light fw-5">مليار ريال</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress-lines success vertical end">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- section -->
+            <section data-aos="fade-up" data-aos-duration="700">
+                <div class="container sec-padding position-relative">
+                    <div class="flex-between flex-column-reverse flex-lg-row sec-arrows-wrapper sec-logo-end logo-2">
+                        <img src="../assets/images/arrows/left/2.svg" class="sec-arrows lg" width="52" alt="arrows">
+
+                        <!-- chart -->
+                        <div class="statistics-loans-geo px-12">
+                            <div id="geoChart" class="chart-wrapper" data-aos="fade-up" data-aos-duration="700">
+                                <div class="chart-circle">
+                                    <h3 class="text-success display-4 fw-6 purecounter" data-purecounter-end="12.9" data-purecounter-decimals="1">12.9</h3>
+                                    <h4 class="text-success-light fw-5">مليار ريال</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2 class="charts-title sec-title text-success w-lg-3 mx-auto" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine"> التوزيع الجغرافي لقيمة القروض المعتمدة خلال عام 2023م</h2>
+                    </div>
+                </div>
+            </section>
+
+            <!-- rating -->
+            <div class="rating collapsed">
+                <button class="btn wrapper" onclick="toggleRate()">
+                    <img src="../assets/images/icons/user-star-01.svg" class="white-img" alt="user star">
+                    <img src="../assets/images/icons/close.svg" class="close-btn" alt="close">
+                    <span class="title">قيم تجربتك</span>
+                </button>
+
+                <div class="star-rating" id="star-rating">
+                    <h5 class="title">ما مدي رضاءك عن التقرير؟</h5>
+                    <div class="stars">
+                        <input type="radio" name="rating" id="rating-1"><label for="rating-1"></label>
+                        <input type="radio" name="rating" id="rating-2"><label for="rating-2"></label>
+                        <input type="radio" name="rating" id="rating-3"><label for="rating-3"></label>
+                        <input type="radio" name="rating" id="rating-4"><label for="rating-4"></label>
+                        <input type="radio" name="rating" id="rating-5"><label for="rating-5"></label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- section -->
+            <section class="sec-padding routing-links">
+                <div class="container">
+                    <nav>
+                        <div class="visitors">
+                            <div class="grid-icon mt-2">
+                                <img src="../assets/images/icons/eye.svg" class="mt-2" alt="eye">
+                                <h2 class="title">عدد الزائرين</h2>
+                                <h2 class="value">233443</h2>
+                            </div>
+                        </div>
+
+                        <a href="" class="btn btn-success">
+                            <span class="fs-2">
+                                <i class='material-icons fs-5'> format_indent_decrease </i>
+                                الموضوع التالي
+                            </span>
+                            <span class="display-5 fw-6" id="next-page">البرامج والمنتجات التمويلية</span>
+                        </a>
+
+                        <a href="" class="btn">
+                            <span class="op-7 fs-2">
+                                <i class='material-icons fs-5'> format_indent_increase </i>
+                                الموضوع السابق
+                            </span>
+                            <span class="op-7 display-5 fw-6" id="prev-page">كلمة سعادة الرئيس التنفيذي </span>
+                        </a>
+                    </nav>
+                </div>
+            </section>
+        </main>
+
+        <!-- inner modal -->
+        <div class="modal inner-modal fade" id="innerModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn close-btn" data-bs-dismiss="modal" aria-label="Close">
+                            <i class='material-icons flex-center'>close</i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="main-list">
+                            <li>
+                                <button type="button" class="btn" id="link-1">
+                                    <span>01</span>
+                                    <span>لمحة عن الصندوق </span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-2">
+                                    <span>02</span>
+                                    <span>أبرز أرقام 2023م</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-3">
+                                    <span>03</span>
+                                    <span>اتجاهات ومؤشرات الأقتصاد المحلي</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-4">
+                                    <span>04</span>
+                                    <span>النشاط الإقراضي للصندوق</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-5">
+                                    <span>05</span>
+                                    <span>استراتيجية الصندوق</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-6">
+                                    <span>06</span>
+                                    <span>التحول الرقمي و تقنية المعلومات</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-7">
+                                    <span>07</span>
+                                    <span>تنمية القدرات البشرية </span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-8">
+                                    <span>08</span>
+                                    <span>الصندوق خلال 50 عاما</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-9">
+                                    <span>09</span>
+                                    <span>دراسة صناعية: صناعة الحديد والصلب</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="btn" id="link-10">
+                                    <span>10</span>
+                                    <span>إحصاءات النشاط الاقراضي</span>
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="chid-wrapper">
+                            <ul class="child-menu" id="menu-1">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../about/brief.html">الصندوق في سطور </a></li>
+                                <li><a href="../about/board.html">مجلس الإدارة </a></li>
+                                <li><a href="../about/org-structure.html">الهيكل التنظيمي</a></li>
+                                <li><a href="../about/chariman-intro.html">كلمة معالي رئيس مجلس الإدارة</a></li>
+                                <li><a href="../about/ceo-word.html">كلمة سعادة الرئيس التنفيذي</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-2">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="loans.html">أولا: النشاط الإقراضي</a></li>
+                                <li><a href="digital-transformation.html">ثانيا: التحول الرقمي</a></li>
+                                <li><a href="sponsor.html">ثالثا: البرامج التحفيزبة</a></li>
+                                <li><a href="human-capital.html">رابعا: تطوير رأس المال البشري</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-3">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../eco-status/eco-status.html">اتجاهات و مؤشرات الأقتصاد المحلي </a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-4">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../lending-activity/lending-activity.html">النشاط الإقراضي للصندوق</a></li>
+                                <li><a href="../lending-activity/sectoral-distribution.html">التوزيع القطاعي للقروض المعتمدة</a></li>
+                                <li><a href="../lending-activity/geographic-distribution.html">التوزيع الجغرافي للقروض المعتمدة</a></li>
+                                <li><a href="../lending-activity/incentive-programs.html">البرامج التحفيزية</a></li>
+                                <li><a href="../lending-activity/production-projects.html">المشاريع التي بدأت الإنتاج</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-5">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../strategy/goals.html">أهداف الصندوق الاستراتيجية</a></li>
+                                <li><a href="../strategy/priorities.html">أولويات استراتيجية الصندوق 2023</a></li>
+                                <li><a href="../strategy/achievements.html">أهم الإنجازات في 2023</a></li>
+                                <li><a href="../strategy/indicators.html">مؤشــرات الأداء الرئيسية 2023م</a></li>
+                                <li><a href="../strategy/awards.html">جوائز و شهادات مُميّزة</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-6">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../digitalization/projects.html">المشاريع الرئيسية المنجزة</a></li>
+                                <li><a href="../digitalization/services.html">الخدمات الرقمية المقدمة</a></li>
+                                <li><a href="../digitalization/joureny.html">رحلة الصندوق في التحول الرقمي</a></li>
+                                <li><a href="../digitalization/technical-house.html">برنامج ترتيب البيت التقني</a></li>
+                                <li><a href="../digitalization/awards.html">شهادات استحقاق و تجديد الأيزو</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-7">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../human-development/institutional-culture.html">أولا: الثقافة المؤسسية</a></li>
+                                <li><a href="../human-development/recruitment.html">ثانيًا: التوظيف</a></li>
+                                <li><a href="../human-development/training-programs.html">ثالثــًا: برامج التدريب والتأهيل</a></li>
+                                <li><a href="../human-development/academy.html">رابعًا: أكاديمية الصندوق الصناعي</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-8">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../50-years/50-years.html">الصندوق خلال 50 عامًا</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-9">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../industrial-study/intro.html">المقدمة</a></li>
+                                <li><a href="../industrial-study/global-indicators.html">المؤشرات العالمية الرئيسية</a></li>
+                                <li><a href="../industrial-study/regional-indicators.html">المؤشرات الإقليمية الرئيسية</a></li>
+                                <li><a href="../industrial-study/ksa-market.html">حجم الطلب في السوق السعودي</a></li>
+                                <li><a href="../industrial-study/challenges-opportunities.html">الفرص و التحديات</a></li>
+                                <li><a href="../industrial-study/conclusion.html">الخلاصة</a></li>
+                            </ul>
+
+                            <ul class="child-menu" id="menu-10">
+                                <li><button type="button" class="btn close-btn" aria-label="Close">
+                                        <i class='material-icons flex-center'>close</i>
+                                    </button>
+                                </li>
+                                <li><a href="../lending-statistics/lending-statistics.html">إحصاءات النشاط الاقراضي </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- download modal -->
+        <div class="modal download-modal fade" id="downloadModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <!-- step 1 -->
+                    <div class="step-1" id="step-1">
+                        <div class="modal-header">
+                            <div class="flex-between w-100">
+                                <h4 class="title">تحميل ملف الفصل 2</h4>
+                                <button type="button" class="btn close-btn" data-bs-dismiss="modal" aria-label="Close">
+                                    <i class='material-icons flex-center'>close</i>
+                                </button>
+                            </div>
+                            <p class="description">لتحميل الملف يجب ادخال رقم الإقامة من ثم إدخال رقم التحقق المرسل الي رقم الهاتف المحمول</p>
+                        </div>
+                        <div class="modal-body">
+                            <h5 class="body-title">برجاء إدخال رقم الإقامة</h5>
+                            <input class="form-control" placeholder="مثلا 232311445332">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-gradient-primary" onclick="downloadFile()">تحميل الملف</button>
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">إلغاء</button>
+                        </div>
+                    </div>
+
+                    <!-- step 2 -->
+                    <div class="step-2" id="step-2">
+                        <div class="modal-header">
+                            <div class="flex-between w-100">
+                                <h4 class="title">إدخال رقم التحقق</h4>
+                                <button type="button" class="btn close-btn" data-bs-dismiss="modal" aria-label="Close">
+                                    <i class='material-icons flex-center'>close</i>
+                                </button>
+                            </div>
+                            <p class="description">تم إرسال رقم التحقق على رقم +699 *** **** *27</p>
+                        </div>
+                        <div class="modal-body">
+                            <div class="otp-container">
+                                <input maxlength="1" class="form-control otp-input" id="otp1" oninput="OTPMoveToNext(this, 'otp2')">
+                                <input maxlength="1" class="form-control otp-input" id="otp2" oninput="OTPMoveToNext(this, 'otp3')">
+                                <input maxlength="1" class="form-control otp-input" id="otp3" oninput="OTPMoveToNext(this, 'otp4')">
+                                <input maxlength="1" class="form-control otp-input" id="otp4" oninput="OTPMoveToNext(this, '')">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="" class="btn btn-gradient-primary" download>تأكيد</a>
+                            <span class="time">00:00</span>
+                            <button class="btn text-success reset">إعادة إرسال رقم التحقق</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../assets/vendors/jquery.min.js"></script>
+        <script src="../assets/vendors/apexcharts.js"></script>
+
+        <!-- sectors -->
+        <script>
+            var options1 = {
+                series: [75, 11, 10, 3, 1],
+                chart: {
+                    type: 'pie',
+                    height: 600,
+                    width: 600
+                },
+                labels: ['الصناعات الكيميائية', 'الصناعات الهندسية', 'صناعة الاستهلاكية', 'صناعة مواد البناء', 'الصناعات الأخري'],
+                responsive: [{
+                    breakpoint: 1199,
+                    options: {
+                        chart: {
+                            width: 300
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }],
+                colors: ['#447536', '#518539', '#5d923c', '#6ba440', '#95bc75'],
+                legend: {
+                    position: 'left',
+                    formatter: function (seriesName, opts) {
+                        return seriesName + " - " + "%" + opts.w.globals.series[opts.seriesIndex];
+                    }
+                },
+                dataLabels: {
+                    enabled: true,
+                    style: {
+                        fontSize: '14px',
+                        fontWeight: 'normal',
+                    },
+                    formatter: function (val, opts) {
+                        return val.toFixed(0) + '%';
+                    },
+                    dropShadow: {
+                        enabled: false
+                    },
+                },
+
+                tooltip: {
+                    y: {
+                        formatter: function (val) {
+                            return val + '%';
+                        }
+                    }
+                }
+            }
+
+            function checkAndRenderChart1() {
+                const chart = new ApexCharts(document.querySelector("#sectorsChart"), options1);
+                const chartAnimate = document.getElementById('sectorsChart');
+
+                if (chartAnimate.classList.contains('aos-animate')) {
+                    chart.render();
+                    window.removeEventListener('scroll', checkAndRenderChart1);
+                }
+            }
+
+            window.addEventListener('scroll', checkAndRenderChart1);
+        </script>
+
+        <!-- geo -->
+        <script>
+            var options2 = {
+                series: [62, 13, 9, 8, 8,],
+                chart: {
+                    type: 'pie',
+                    height: 600,
+                    width: 600
+                },
+                labels: ['المنطقة الشرقية', 'الرياض', 'مكة المكرمة', 'جازان', 'المناطق الأخري'],
+                responsive: [{
+                    breakpoint: 1199,
+                    options: {
+                        chart: {
+                            width: 300
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }],
+                colors: ['#447536', '#518539', '#5d923c', '#6ba440', '#95bc75'],
+                legend: {
+                    position: 'right',
+                    formatter: function (seriesName, opts) {
+                        return seriesName + " - " + "%" + opts.w.globals.series[opts.seriesIndex];
+                    }
+                },
+                dataLabels: {
+                    enabled: true,
+                    style: {
+                        fontSize: '14px',
+                        fontWeight: 'normal',
+                    },
+                    formatter: function (val, opts) {
+                        return val.toFixed(0) + '%';
+                    },
+                    dropShadow: {
+                        enabled: false
+                    },
+                },
+
+                tooltip: {
+                    y: {
+                        formatter: function (val) {
+                            return val + '%';
+                        }
+                    }
+                }
+            }
+
+            function checkAndRenderChart2() {
+                const chart = new ApexCharts(document.querySelector("#geoChart"), options2);
+                const chartAnimate = document.getElementById('geoChart');
+
+                if (chartAnimate.classList.contains('aos-animate')) {
+                    chart.render();
+                    window.removeEventListener('scroll', checkAndRenderChart2);
+                }
+            }
+
+            window.addEventListener('scroll', checkAndRenderChart2);
+        </script>
+
+        <script src="../assets/vendors/bootstrap.bundle.min.js"></script>
+        <script src="../assets/vendors/aos.js"></script>
+        <script src="../assets/vendors/purecounter_vanilla.js"></script>
+        <script src="../assets/js/main.js"></script>
+    </body>
+
+</html>

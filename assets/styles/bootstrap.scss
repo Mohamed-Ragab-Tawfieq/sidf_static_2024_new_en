@@ -1,0 +1,43 @@
+$primary: #2b5c7f;
+$success: #72a647;
+$white: #fff;
+$black: #000;
+$info: #845a23;
+$danger: #dd4826;
+$blue-100: #c3d8e7;
+
+$theme-colors: (
+    "primary": $primary,
+    "success": $success,
+    "danger": $danger,
+    "info": $info
+);
+
+$colors: (
+    "green": $primary
+);
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1192px,
+    xxl: 1385px
+);
+
+$input-font-weight: 400;
+$input-font-size: clamp(0.75rem, 2.5vw, 1rem);
+$input-btn-font-size: clamp(0.75rem, 2.5vw, 1rem);
+$input-placeholder-color: #bcbcbe;
+$form-select-indicator-padding: 0.75rem;
+
+$modal-backdrop-bg: rgba($black, 0.6);
+
+$nav-tabs-link-active-color: $white;
+$nav-tabs-link-active-bg: $primary;
+
+$table-striped-order: odd;
+$table-striped-bg: #edecec;
+$table-bg: transparent;
+
+@import "bootstrap/bootstrap.scss";

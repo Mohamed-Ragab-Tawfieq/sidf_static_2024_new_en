@@ -1,0 +1,41 @@
+/* input date icon change */
+input[type="date"] {
+    html:lang(ar) & {
+        text-align: right;
+    }
+
+    &:disabled {
+        html:lang(en) & {
+            text-indent: 0.75rem;
+        }
+    }
+
+    &:disabled,
+    &::-webkit-calendar-picker-indicator {
+        background: url(../images/icons/calendar.svg) no-repeat 2%;
+
+        html:lang(ar) & {
+            background: url(../images/icons/calendar.svg) no-repeat 98%;
+        }
+    }
+}
+
+input[type="radio"] {
+    accent-color: $success;
+
+    label & {
+        display: none;
+
+        & ~ span::before {
+            content: url(../images/icons/radio-white.svg);
+            vertical-align: sub;
+            margin-inline-end: 0.5rem;
+        }
+
+        &:checked {
+            & ~ span::before {
+                content: url(../images/icons/radio.svg);
+            }
+        }
+    }
+}

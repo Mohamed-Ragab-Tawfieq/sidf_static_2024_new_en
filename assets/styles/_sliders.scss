@@ -1,0 +1,52 @@
+.owl-nav {
+    @extend .flex-between;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 50px !important;
+
+    @media (max-width: 1199px) {
+        margin-top: 30px !important;
+    }
+}
+
+.owl-prev,
+.owl-next {
+    @extend .flex-center;
+
+    width: 40px;
+    height: 40px;
+
+    background: $white !important;
+    color: $success !important;
+    border: 1px solid $success !important;
+
+    font-size: 1.7rem !important;
+}
+
+.owl-dots {
+    margin-top: -35px;
+
+    .owl-dot {
+        vertical-align: middle;
+
+        span {
+            width: 7.3vw !important;
+            height: 1px !important;
+
+            border-radius: 0 !important;
+            margin: 5px 0 !important;
+        }
+
+        &.active {
+            span {
+                height: 3px !important;
+                background-color: $success !important;
+
+                .circle-dots & {
+                    height: 11px !important;
+                    width: 11px !important;
+                }
+            }
+        }
+    }
+}

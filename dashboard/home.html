@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Saudi Industrial Development Fund">
+        <link rel="icon" href="../assets/favicon.png">
+        <link rel="apple-touch-icon" href="../assets/favicon.png">
+        <title>SIDF</title>
+        <link rel="stylesheet" href="../assets/styles/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/vendors/aos.css">
+        <link rel="stylesheet" href="../assets/styles/main.min.css">
+    </head>
+
+    <body id="body">
+        <div class="dash-layout">
+            <aside class="dash-side-menu collapsed" id="dash-side-menu">
+                <div class="logo">
+                    <img src="../assets/images/logo.svg" width="130" class="img-fluid" alt="logo">
+                </div>
+
+                <label>التصفح</label>
+
+                <nav class="items-list">
+                    <a class="item" href="home.html">
+                        <img src="../assets/images/icons/dashboard-square-01.svg" class="icon" width="22" alt="icon">
+                        <span class="text">لوحة التحكم</span>
+                    </a>
+                    <a class="item" href="visitors.html">
+                        <img src="../assets/images/icons/user-multiple-02.svg" class="icon" width="22" alt="icon">
+                        <span class="text">الزائرين</span>
+                    </a>
+                    <a class="item" href="rate.html">
+                        <img src="../assets/images/icons/user-star-01.svg" class="icon" width="22" alt="icon">
+                        <span class="text">التقييمات</span>
+                    </a>
+                    <a class="item" href="downloads.html">
+                        <img src="../assets/images/icons/download-03.svg" class="icon" width="22" alt="icon">
+                        <span class="text">التحميلات</span>
+                    </a>
+                </nav>
+            </aside>
+
+            <div class="dash-content">
+                <header class="dash-header">
+                    <button class="btn toggle-btn" onclick="toggleMobileMenu()"><img src="../assets/images/icons/menu.svg" alt="menu"></button>
+                    <div class="empty"></div>
+                    <h1 class="title"><a href="home.html">لوحة التحكم للتقــرير التفاعلي 2023</a></h1>
+                    <img src="../assets/images/logo.svg" width="95" class="img-fluid logo" alt="logo">
+                    <button class="btn lang-btn">EN</button>
+                </header>
+
+                <main id="dash-main">
+                    <div class="grid-2">
+                        <div class="dash-card">
+                            <h2 class="title">التحميلات لكل فصل</h2>
+                            <div id="downloadsChart"></div>
+                        </div>
+
+                        <div class="dash-card">
+                            <h2 class="title">التقييمات لكل فصل</h2>
+                            <div id="rateChart"></div>
+                        </div>
+
+                        <div class="dash-card total span-2">
+                            <header>
+                                <h2 class="title">التحميلات لكل فصل</h2>
+
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="dayChart-tab" data-bs-toggle="tab" data-bs-target="#dayChart-tab-pane" type="button" role="tab" aria-controls="dayChart-tab-pane" aria-selected="true">اليوم</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="weekChart-tab" data-bs-toggle="tab" data-bs-target="#weekChart-tab-pane" type="button" role="tab" aria-controls="weekChart-tab-pane" aria-selected="false">أسبوع</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="monthChart-tab" data-bs-toggle="tab" data-bs-target="#monthChart-tab-pane" type="button" role="tab" aria-controls="monthChart-tab-pane" aria-selected="false">شهر</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="yearChart-tab" data-bs-toggle="tab" data-bs-target="#yearChart-tab-pane" type="button" role="tab" aria-controls="yearChart-tab-pane" aria-selected="false">عام</button>
+                                    </li>
+                                </ul>
+                            </header>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="dayChart-tab-pane" role="tabpanel" aria-labelledby="dayChart-tab" tabindex="0">
+                                    <h4 class="subtitle">تحميلات اليوم</h4>
+                                    <div id="dayChart"></div>
+                                </div>
+                                <div class="tab-pane fade" id="weekChart-tab-pane" role="tabpanel" aria-labelledby="weekChart-tab" tabindex="0">
+                                    <h4 class="subtitle">تحميلات أسبوع</h4>
+                                    <div id="weekChart"></div>
+                                </div>
+                                <div class="tab-pane fade" id="monthChart-tab-pane" role="tabpanel" aria-labelledby="monthChart-tab" tabindex="0">
+                                    <h4 class="subtitle">تحميلات شهر</h4>
+                                    <div id="monthChart"></div>
+                                </div>
+                                <div class="tab-pane fade" id="yearChart-tab-pane" role="tabpanel" aria-labelledby="yearChart-tab" tabindex="0">
+                                    <h4 class="subtitle">تحميلات عام</h4>
+                                    <div id="yearChart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+
+        <script src="../assets/vendors/jquery.min.js"></script>
+        <script src="../assets/vendors/apexcharts.js"></script>
+
+        <!-- downloads -->
+        <script>
+            var downloadsChartOptions = {
+                series: [634, 654, 12343, 565, 898, 443, 85, 9, 231, 1265],
+                chart: {
+                    type: 'donut',
+                    height: 520,
+                    width: 520,
+                    toolbar: {
+                        show: true,
+                        offsetX: 0,
+                        offsetY: 0,
+                        tools: {
+                            download: "<i class='material-icons'>more_vert</i>",
+                        }
+                    }
+                },
+                labels: ['الفصل 1', 'الفصل 2', 'الفصل 3', 'الفصل 4', 'الفصل 5', 'الفصل 6', 'الفصل 7', 'الفصل 8', 'الفصل 9', 'الفصل 10'],
+                responsive: [{
+                    breakpoint: 1450,
+                    options: {
+                        chart: {
+                            width: 450
+                        },
+                        legend: {
+                            position: 'left'
+                        }
+                    }
+                },
+                {
+                    breakpoint: 1199,
+                    options: {
+                        chart: {
+                            width: 300
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }],
+                colors: ['#30461E', '#517632', '#72A410', '#A1C384', '#D3E3C6', '#19364B', '#2B5C7F', '#3980B3', '#7CABCC', '#C3D8E7'],
+                legend: {
+                    position: 'left',
+                    formatter: function (seriesName, opts) {
+                        return seriesName + " ( " + opts.w.globals.series[opts.seriesIndex] + ")";
+                    },
+                    markers: {
+                        shape: 'square',
+                        size: 7
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    show: false
+                },
+                plotOptions: {
+                    pie: {
+                        donut: {
+                            labels: {
+                                show: true,
+                                total: {
+                                    show: true,
+                                    label: '',
+                                }
+                            }
+                        }
+                    }
+                },
+            }
+
+            const downloadsChart = new ApexCharts(document.querySelector("#downloadsChart"), downloadsChartOptions);
+            downloadsChart.render();
+        </script>
+
+        <!-- rate -->
+        <script>
+            var rateChartOptions = {
+                series: [634, 654, 12343, 565, 898, 443, 85, 9, 231, 1265],
+                chart: {
+                    type: 'donut',
+                    height: 520,
+                    width: 520,
+                    toolbar: {
+                        show: true,
+                        offsetX: 0,
+                        offsetY: 0,
+                        tools: {
+                            download: "<i class='material-icons'>more_vert</i>",
+                        }
+                    }
+                },
+                labels: ['الفصل 1', 'الفصل 2', 'الفصل 3', 'الفصل 4', 'الفصل 5', 'الفصل 6', 'الفصل 7', 'الفصل 8', 'الفصل 9', 'الفصل 10'],
+                responsive: [{
+                    breakpoint: 1450,
+                    options: {
+                        chart: {
+                            width: 450
+                        },
+                        legend: {
+                            position: 'left'
+                        }
+                    }
+                },
+                {
+                    breakpoint: 1199,
+                    options: {
+                        chart: {
+                            width: 300
+                        },
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }],
+                colors: ['#30461E', '#517632', '#72A410', '#A1C384', '#D3E3C6', '#19364B', '#2B5C7F', '#3980B3', '#7CABCC', '#C3D8E7'],
+                legend: {
+                    position: 'left',
+                    formatter: function (seriesName, opts) {
+                        return seriesName + " ( " + opts.w.globals.series[opts.seriesIndex] + ")";
+                    },
+                    markers: {
+                        shape: 'square',
+                        size: 7
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    show: false
+                },
+                plotOptions: {
+                    pie: {
+                        donut: {
+                            labels: {
+                                show: true,
+                                total: {
+                                    show: true,
+                                    label: '',
+                                }
+                            }
+                        }
+                    }
+                },
+            }
+
+            const rateChart = new ApexCharts(document.querySelector("#rateChart"), rateChartOptions);
+            rateChart.render();
+        </script>
+
+        <!-- day downloads -->
+        <script>
+            var dayChartOptions = {
+                series: [{
+                    data: [340, 340, 410, 350, 305, 220, 305, 350, 210, 290]
+                }],
+                chart: {
+                    type: 'bar',
+                    height: 350,
+                    toolbar: {
+                        tools: {
+                            download: "<i class='material-icons'>more_vert</i>",
+                        }
+                    }
+                },
+                plotOptions: {
+                    bar: {
+                        borderRadius: window.innerWidth >= 1200 ? 10 : 2,
+                        horizontal: false,
+                        columnWidth: '38%',
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                xaxis: {
+                    categories: ['الفصل 10', 'الفصل 9', 'الفصل 8', 'الفصل 7', 'الفصل 6', 'الفصل 5', 'الفصل 4', 'الفصل 3', 'الفصل 2', 'الفصل 1'],
+                    position: 'bottom',
+
+                },
+                yaxis: {
+                    labels: {
+                        formatter: function (value) {
+                            return value.toFixed(0);
+                        }
+                    },
+                    min: 0,
+                    max: 700,
+                    tickAmount: 7,
+                },
+                fill: {
+                    type: 'gradient',
+                    gradient: {
+                        shade: 'dark',
+                        type: "vertical",
+                        gradientToColors: ['#386732'], // Ending color
+                        stops: [0, 100]
+                    }
+                },
+                colors: ['#66bb6a'],
+                grid: {
+                    show: true,
+                    borderColor: '#e7e7e7',
+                    strokeDashArray: 4,
+                },
+            };
+
+            const dayChart = new ApexCharts(document.querySelector("#dayChart"), dayChartOptions);
+            dayChart.render();
+        </script>
+
+        <!-- week downloads -->
+        <script>
+            var weekChartOptions = {
+                series: [{
+                    data: [340, 340, 410, 350, 305, 220, 305, 350, 210, 290]
+                }],
+                chart: {
+                    type: 'bar',
+                    height: 350,
+                    toolbar: {
+                        tools: {
+                            download: "<i class='material-icons'>more_vert</i>",
+                        }
+                    }
+                },
+                plotOptions: {
+                    bar: {
+                        borderRadius: 10,
+                        horizontal: false,
+                        columnWidth: '38%',
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                xaxis: {
+                    categories: ['الفصل 10', 'الفصل 9', 'الفصل 8', 'الفصل 7', 'الفصل 6', 'الفصل 5', 'الفصل 4', 'الفصل 3', 'الفصل 2', 'الفصل 1'],
+                    position: 'bottom',
+
+                },
+                yaxis: {
+                    labels: {
+                        formatter: function (value) {
+                            return value.toFixed(0);
+                        }
+                    },
+                    min: 0,
+                    max: 700,
+                    tickAmount: 7,
+                },
+                fill: {
+                    type: 'gradient',
+                    gradient: {
+                        shade: 'dark',
+                        type: "vertical",
+                        gradientToColors: ['#386732'], // Ending color
+                        stops: [0, 100]
+                    }
+                },
+                colors: ['#66bb6a'],
+                grid: {
+                    show: true,
+                    borderColor: '#e7e7e7',
+                    strokeDashArray: 4,
+                },
+            };
+
+            const weekChart = new ApexCharts(document.querySelector("#weekChart"), weekChartOptions);
+            weekChart.render();
+        </script>
+
+        <!-- month downloads -->
+        <script>
+            var monthChartOptions = {
+                series: [{
+                    data: [340, 340, 410, 350, 305, 220, 305, 350, 210, 290]
+                }],
+                chart: {
+                    type: 'bar',
+                    height: 350,
+                    toolbar: {
+                        tools: {
+                            download: "<i class='material-icons'>more_vert</i>",
+                        }
+                    }
+                },
+                plotOptions: {
+                    bar: {
+                        borderRadius: 10,
+                        horizontal: false,
+                        columnWidth: '38%',
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                xaxis: {
+                    categories: ['الفصل 10', 'الفصل 9', 'الفصل 8', 'الفصل 7', 'الفصل 6', 'الفصل 5', 'الفصل 4', 'الفصل 3', 'الفصل 2', 'الفصل 1'],
+                    position: 'bottom',
+
+                },
+                yaxis: {
+                    labels: {
+                        formatter: function (value) {
+                            return value.toFixed(0);
+                        }
+                    },
+                    min: 0,
+                    max: 700,
+                    tickAmount: 7,
+                },
+                fill: {
+                    type: 'gradient',
+                    gradient: {
+                        shade: 'dark',
+                        type: "vertical",
+                        gradientToColors: ['#386732'], // Ending color
+                        stops: [0, 100]
+                    }
+                },
+                colors: ['#66bb6a'],
+                grid: {
+                    show: true,
+                    borderColor: '#e7e7e7',
+                    strokeDashArray: 4,
+                },
+            };
+
+            const monthChart = new ApexCharts(document.querySelector("#monthChart"), monthChartOptions);
+            monthChart.render();
+        </script>
+
+        <!-- year downloads -->
+        <script>
+            var yearChartOptions = {
+                series: [{
+                    data: [340, 340, 410, 350, 305, 220, 305, 350, 210, 290]
+                }],
+                chart: {
+                    type: 'bar',
+                    height: 350,
+                    toolbar: {
+                        tools: {
+                            download: "<i class='material-icons'>more_vert</i>",
+                        }
+                    }
+                },
+                plotOptions: {
+                    bar: {
+                        borderRadius: 10,
+                        horizontal: false,
+                        columnWidth: '38%',
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                xaxis: {
+                    categories: ['الفصل 10', 'الفصل 9', 'الفصل 8', 'الفصل 7', 'الفصل 6', 'الفصل 5', 'الفصل 4', 'الفصل 3', 'الفصل 2', 'الفصل 1'],
+                    position: 'bottom',
+
+                },
+                yaxis: {
+                    labels: {
+                        formatter: function (value) {
+                            return value.toFixed(0);
+                        }
+                    },
+                    min: 0,
+                    max: 700,
+                    tickAmount: 7,
+                },
+                fill: {
+                    type: 'gradient',
+                    gradient: {
+                        shade: 'dark',
+                        type: "vertical",
+                        gradientToColors: ['#386732'], // Ending color
+                        stops: [0, 100]
+                    }
+                },
+                colors: ['#66bb6a'],
+                grid: {
+                    show: true,
+                    borderColor: '#e7e7e7',
+                    strokeDashArray: 4,
+                },
+            };
+
+            const yearChart = new ApexCharts(document.querySelector("#yearChart"), yearChartOptions);
+            yearChart.render();
+        </script>
+
+        <script src="../assets/vendors/bootstrap.bundle.min.js"></script>
+        <script src="../assets/vendors/aos.js"></script>
+        <script src="../assets/vendors/purecounter_vanilla.js"></script>
+        <script src="../assets/js/main.js"></script>
+    </body>
+
+</html>
