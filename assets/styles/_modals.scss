@@ -181,6 +181,10 @@
         border-radius: 0;
         border: none;
 
+        [lang="en"] & {
+            background-position-x: right !important;
+        }
+
         @media (max-width: 1199px) {
             background:
                 url("../images/modal-bg.png") no-repeat center / 350%,

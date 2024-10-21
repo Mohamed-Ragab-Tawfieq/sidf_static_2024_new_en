@@ -163,16 +163,29 @@
         margin-bottom: -1rem;
         text-align: start;
 
+        [lang="en"] & {
+            max-width: 254px;
+            margin: auto;
+        }
+
         span {
             font-weight: 700;
 
             &:first-of-type {
                 margin-inline-start: 1rem;
                 font-size: 1.13rem;
+
+                [lang="en"] & {
+                    font-size: 0.9rem;
+                }
             }
 
             &:last-of-type {
                 font-size: 1.38rem;
+
+                [lang="en"] & {
+                    font-size: 1rem;
+                }
             }
         }
     }
@@ -184,6 +197,11 @@
         padding-top: 2rem;
         overflow: hidden;
         text-align: start;
+
+        [lang="en"] & {
+            max-width: 254px;
+            margin-top: -1rem;
+        }
 
         .title {
             font-size: 1.13rem;

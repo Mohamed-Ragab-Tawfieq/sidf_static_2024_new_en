@@ -89,6 +89,10 @@
         inset-inline-end: 200px;
         transition: all 1s ease-in-out;
 
+        [lang="en"] & {
+            transform: translateY(50%) scale(1) rotate(180deg);
+        }
+
         @media (max-width: 1199px) {
             inset-inline-end: 20px;
             width: 100px;
@@ -324,21 +328,37 @@
 .first-section {
     background: url("../images/logo/1.svg") no-repeat top -20% left -25%;
 
+    [lang="en"] & {
+        background: url("../images/logo/1.svg") no-repeat top -20% right -25% !important;
+    }
+
     @media (max-width: 1199px) {
         background: url(../images/logo/1.svg) no-repeat top -5% left -50% / 60%;
+
+        [lang="en"] & {
+            background: url(../images/logo/1.svg) no-repeat top -5% right -50% / 60% !important;
+        }
     }
 
     &.primary {
         background: url("../images/logo/2.svg") no-repeat top -10% left -15% / 30%;
 
+        [lang="en"] & {
+            background: url("../images/logo/2.svg") no-repeat top -10% right -15% / 30% !important;
+        }
+
         @media (max-width: 1199px) {
             background: url(../images/logo/2.svg) no-repeat top -5% left -85% / 70%;
+
+            [lang="en"] & {
+                background: url(../images/logo/2.svg) no-repeat top -5% right -85% / 70% !important;
+            }
         }
     }
 
     &.aos-animate {
         .sec-arrows {
-            transition: all 1s ease-in-out 0.5s;
+            transition: all 1s ease-in-out 0.7s;
         }
     }
 
@@ -660,15 +680,21 @@
 
     .item {
         position: relative;
-        background:
-            url("../images/arrows/left/3.svg") no-repeat center left 0.63rem,
-            $white;
+        background-color: $white;
 
         width: 190px;
         height: 150px;
 
         border: 1px solid $success;
         border-radius: 1rem;
+
+        &::after {
+            content: url("../images/arrows/left/3.svg");
+            position: absolute;
+            bottom: 50%;
+            transform: translateY(50%) scaleX(-1);
+            inset-inline-end: 0.63rem;
+        }
 
         @media (max-width: 1199px) {
             width: 160px;
@@ -957,8 +983,12 @@
             transform: rotate(180deg);
             font-size: 2rem;
 
-            @media (max-width: 1199px) {
+            [lang="en"] & {
                 font-size: 1.5rem;
+            }
+
+            @media (max-width: 1199px) {
+                font-size: 1.25rem;
             }
         }
 
@@ -996,6 +1026,10 @@
         .stars {
             direction: ltr !important;
             display: inline-block;
+
+            [lang="en"] & {
+                direction: rtl !important;
+            }
 
             &.disabled {
                 pointer-events: none;
@@ -1284,6 +1318,10 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    [lang="en"] & {
+        max-width: 85%;
+    }
 
     li {
         position: relative;
