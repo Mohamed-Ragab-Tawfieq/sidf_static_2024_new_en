@@ -262,8 +262,16 @@
                     bottom: 50%;
                     transform: translateY(50%);
 
+                    [lang="en"] & {
+                        transform: translateY(50%) rotate(180deg);
+                    }
+
                     @media (max-width: 1199px) {
                         transform: translateY(50%) scale(0.7);
+
+                        [lang="en"] & {
+                            transform: translateY(50%) scale(0.7) rotate(180deg);
+                        }
                     }
                 }
             }
@@ -357,6 +365,11 @@
                         background:
                             url("../images/arrows/right/6.svg") no-repeat center left,
                             rgba(#3b5c27, 0.5);
+
+                        [lang="en"] & {
+                            background-image: url("../images/arrows/right/6-en.svg") !important;
+                            background-position-x: right !important;
+                        }
                     }
                 }
 
